@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+    <title>Shopping App</title>
+</head>
+<body>
+    <ion-card> 
+        <ion-card-header>
+            <ion-card-title>Add a new item</ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content>
+            <ion-item>
+                <ion-input id="name-input" label="Name" label-placement="floating" placeholder="Banana"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-input id="quantity-input" label="Quantity" type="number" label-placement="floating" placeholder="1"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-select id="category-select" label="Category" label-placement="floating">
+                    <ion-select-option value="vegetables">Vegetables</ion-select-option>
+                    <ion-select-option value="cosmetics">Cosmetics</ion-select-option>
+                    <ion-select-option value="meat">Meat</ion-select-option>
+                    <ion-select-option value="tools">Tools</ion-select-option>
+                    <ion-select-option value="drinks">Drinks</ion-select-option>
+                    <ion-select-option value="others">Others</ion-select-option>
+                </ion-select>
+            </ion-item>
+            <div class="ion-text-end ion-padding-top">
+                <ion-button id="cancel-button" fill="outline" color="danger">
+                    <ion-icon slot="start" name="close-circle-outline"></ion-icon>
+                    Cancel
+                </ion-button>
+                <ion-button id="add-button">
+                    <ion-icon slot="start" name="add-circle-outline"></ion-icon>
+                    Add
+                </ion-button>
+            </div>
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <ion-card-title>
+                Shopping list
+                <ion-badge id="count-badge"></ion-badge>
+            </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            <ion-list id="shopping-list">
+            </ion-list>
+        </ion-card-content>
+    </ion-card>
+    <script src="app.js"></script>
+</body>
+</html>
